@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculator {
+  max-width: 500px;
+  width: 100%;
+  background-color: #1e2a38;
+  padding: 10px 25px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADING */
+h2 {
+  text-align: center;
+  background-color: #00c4d6;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* LABELS & SECTIONS */
+.section {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin-top: 18px; /* Adjust this depending on overall layout */
+  background: transparent; /* Prevent double bg */
+}
+
+/* Chrome, Safari, Edge - Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #0097a7;
+  border-radius: 4px;
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #0097a7;
+  margin-top: -6px; /* This centers the thumb vertically on the 8px track */
+  cursor: pointer;
+  border: none;
+}
+
+/* Firefox - Track */
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  background: #0097a7;
+  border-radius: 4px;
+}
+
+/* Firefox - Thumb */
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #0097a7;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* INPUT STYLING */
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  background-color: #e9e9e9;
+  color: #000;
+}
+
+/* INLINE INPUTS */
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 2px 5px 2px 22px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.input-row span {
+  width: 60%;
+  font-weight: 500;
+}
+
+.input-row input {
+  width: 50%;
+  font-size: 15px;
+  background-color: #e1e1e1;
+}
+
+/* BUTTON GROUPS */
+.compound-buttons button{
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  margin-left: 15px;
+  font-size: 13px;
+  background-color: #e0e0e0;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.active {
+  background-color: #00c4d6;
+  color: black;
+}
+.moratorium-buttons {
+  display: flex;
+  gap: 12px; /* Space between buttons */
+  margin-top: 10px;
+}
+
+.moratorium-buttons button {
+  flex: 1; /* All buttons take equal width */
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e0e0e0;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.moratorium-buttons button.active {
+  background-color: #00c4d6;
+  color: black;
+}
+
+.interest-box {
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a3545;
+  color: white;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.interest-label {
+  line-height: 1.4;
+  color: #ccc;
+}
+
+.interest-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-right: 65px;
+}
+
+
+.interest-box h3 {
+  font-size: 22px;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.input-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+}
+
+.input-field .label {
+  width: 60%;
+  color: #333;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.input-field input {
+  width: 35%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #e1e1e1;
+  border: none;
+  text-align: right;
+  font-weight: 500;
+  color: black;
+}
+
+
+/* CALCULATE BUTTON */
+.calculate-btn {
+  background-color: #f7931e;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #e57f0d;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 10px;
+}
